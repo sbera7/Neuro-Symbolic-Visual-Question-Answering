@@ -116,9 +116,6 @@ def build_sample():
             distances = np.array([np.linalg.norm(np.array(my_obj) - np.array(obj[1])) for obj in objects])
             sorted_dists = distances.argsort()
             idx = sorted_dists[0] if distances[sorted_dists[0]] != 0 else sorted_dists[1]
-#             dist_list = [((my_obj - obj[1]) ** 2).sum() for obj in objects]
-#             dist_list[dist_list.index(0)] = 999
-#             closest = dist_list.index(min(dist_list))
             if objects[idx][2] == 'r':
                 answer = 2
             else:
@@ -130,8 +127,6 @@ def build_sample():
             distances = np.array([np.linalg.norm(np.array(my_obj) - np.array(obj[1])) for obj in objects])
             sorted_dists = distances.argsort()
             idx = sorted_dists[-1] if distances[sorted_dists[-1]] != 0 else sorted_dists[-2]
-#             dist_list = [((my_obj - obj[1]) ** 2).sum() for obj in objects]
-#             furthest = dist_list.index(max(dist_list))
             if objects[idx][2] == 'r':
                 answer = 2
             else:
@@ -156,14 +151,14 @@ def build_sample():
     return sample
 
 def convert_sample(sample):
-    '''Converts question/answer vector to natural language questions and programs'''
-    
+    # Convert vector representation to Natural language questions and programs
+
     img, objects, (rel_questions, rel_answers), (norel_questions, norel_answers) = sample
     colors = ['red', 'green', 'blue', 'orange', 'gray', 'yellow']
     answer_sheet = ['yes', 'no', 'rectangle', 'circle', '1', '2', '3', '4', '5', '6']
     questions = rel_questions + norel_questions
     answers = rel_answers + norel_answers
-    
+
     queries = []
     programs = []
     text_answers = []
@@ -171,103 +166,99 @@ def convert_sample(sample):
     for i, (question, answer) in enumerate(zip(questions, answers)):
         query = f'Q{i}. '
         color = colors[question.tolist()[0:6].index(1)]
-        
-        # Non-relational questions
+
+        # Non relational questions
         if question[q_type_idx] == 0:
             if question[sub_q_type_idx] == 1:
-                queries.append(f'What is the shape of the {color} object?')
+                queries.append(f'What is the shape of the {color} of the object?')
                 programs.append(f'filter {color} <nxt> query shape')
-                
-            elif question[sub_q_type_idx+1] == 1:
+
+            elif question[sub_q_type_idx + 1] == 1:
                 queries.append(f'Is there a {color} object on the left?')
-                programs.append(f'filter {color} <nxt> query position <nxt> isLeft')
-                
-            elif question[sub_q_type_idx+2] == 1:
+                programs.append(f'filter {color} <nxt> query positions <nxt> isLeft')
+
+            else:
                 queries.append(f'Is there a {color} object on the top?')
                 programs.append(f'filter {color} <nxt> query position <nxt> isTop')
             
         # Relational questions
-        elif question[q_type_idx] == 1:
+        else:
             if question[sub_q_type_idx] == 1:
-                queries.append(f'What is the closest shape to the {color} object?')
+                queries.append(f'What is the shape of the closest object to the {color} object?')
                 programs.append(f'filter {color} <nxt> relate closest <nxt> query shape')
-                
-            elif question[sub_q_type_idx+1] == 1:
-                queries.append(f'What is the furthest shape from the {color} object?')
-                programs.append(f'filter {color} <nxt> relate furthest <nxt> query shape')
-                
-            elif question[sub_q_type_idx+2] == 1:
-                queries.append(f'How many objects of the same shape as the {color} object are there?')
+
+            elif question[sub_q_type_idx + 1] == 1:
+                queries.append(f'What is the shape of the farthest object to the {color} object?')
+                programs.append(f'filter {color} <nxt> relate farthest <nxt> query shape')
+
+            else:
+                queries.append(f'How many objects of the shape as that of the {color} are there?')
                 programs.append(f'filter {color} <nxt> query shape <nxt> filter <nxt> count')
-        
+
+
         ans = answer_sheet[answer]
         text_answers.append(ans)
-        
-    return img, objects, queries, programs, text_answers
-    
-def build_dataset(num_samples, data_dir, prefix='train'):
+
+    return img, objects, queries, text_answers, programs
+
+
+def build_dataset(num_samples, data_dir, prefix):
     '''Builds a Full Dataset with Images, Detector Data, Attribute Data, Queries, Programs and Answers'''
-    
-    # Generate Samples
     samples = [build_sample() for _ in range(num_samples)]
-    
-    # Init dataframes
+
+    # Init dataframes 
     img_det_df = pd.DataFrame(columns=['filename', 'width', 'height', 'class', 'xmin', 'ymin', 'xmax', 'ymax'])
-    que2prog_df = pd.DataFrame(columns=['filename', 'answer', 'query_text', 'program_text'])
-    
+    que_to_prog = pd.DataFrame(columns=['answer', 'query_text', 'program_text'])
     img_dir = os.path.join(data_dir, 'images')
-    shape_map = {'r': 'rectangle', 'c': 'circle'}
+
+    shape_map = {'r':'rectangle', 'c':'circle'}
     
     try:
         os.makedirs(data_dir)
     except:
         pass
-    
+
     try:
         os.makedirs(img_dir)
     except:
         pass
-    
+
     for i, sample in enumerate(tqdm(samples)):
         # Get Data
         img, objects, queries, programs, answers = convert_sample(sample)
-        
-        # Save Image
-        filename = f'{i}.jpg'
-        img_path = os.path.join(img_dir, filename)
+        file_name = f'{i}.jpg'
+        img_path = os.path.join(img_dir, file_name)
         cv2.imwrite(img_path, img * 255)
-        
-        # Append image data to dataframes
+
         for obj in objects:
-            # Get object params
+            # get object parameters
             color_id, shape, bbox = obj[0], shape_map[obj[2]], obj[3]
-            
-            img_det_df = img_det_df.append({'filename': filename, 
-                                            'width': img_size, 
-                                            'height': img_size, 
-                                            'class': 'obj', 
-                                            'xmin': bbox[0], 'ymin': bbox[1],
-                                            'xmax': bbox[2], 'ymax': bbox[3]}, ignore_index=True)
+
+            img_det_df = pd.concat([img_det_df, pd.DataFrame([{'filename': file_name, 
+                                                    'width': img_size, 
+                                                    'height': img_size, 
+                                                    'class': 'obj', 
+                                                    'xmin': bbox[0], 'ymin': bbox[1],
+                                                    'xmax': bbox[2], 'ymax': bbox[3]}])], ignore_index=True)
         
         # Append text data to dataframe
         for answer, query, program in zip(answers, queries, programs):
-            que2prog_df = que2prog_df.append({'filename': filename,
+            que_to_prog = pd.concat([que_to_prog, pd.DataFrame([{'filename': file_name,
                                               'answer': answer,
                                               'query_text': query,
-                                              'program_text': program}, ignore_index=True)
-    
-    # Save to csv files
-    img_det_df.to_csv(os.path.join(data_dir, f'{prefix}_img_det.csv'), index=False)
-    que2prog_df.to_csv(os.path.join(data_dir, f'{prefix}_q2p.csv'), index=False)
+                                              'program_text': program}])], ignore_index=True)
+
+        img_det_df.to_csv(os.path.join(data_dir, f'{prefix}_img_det.csv'), index=False)
+        que_to_prog.to_csv(os.path.join(data_dir, f'{prefix}_que_to_prog.csv'), index=False)
     
 if __name__ == '__main__':
-    
-    parser = argparse.ArgumentParser(description='Sort-of-CLEVR NSAI Dataset Generator')
-    parser.add_argument('--n_train', type=int, default=50, help='number of train images to generates')
-    parser.add_argument('--n_test', type=int, default=1000, help='number of test images to generates')
+    parser = argparse.ArgumentParser('Dataset genertor')
+    parser.add_argument('--n_train', type=int, default=50, help='Number of training images to be generated')
+    parser.add_argument('--n_test', type=int, default=100, help='Number of testing images to be generated')
     args = parser.parse_args()
-    
-    print('Building Train Dataset...')
+
+    print('Generating training images...')
     build_dataset(args.n_train, 'train', 'train')
-    print('Building Test Dataset...')
+    
+    print('Generating test images...')
     build_dataset(args.n_test, 'test', 'test')
