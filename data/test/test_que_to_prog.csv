@@ -1,0 +1,201 @@
+answer,query_text,program_text,filename
+circle,What is the shape of the farthest object to the blue object?,filter blue <nxt> relate farthest <nxt> query shape,0.jpg
+3,How many objects of the shape as that of the gray are there?,filter gray <nxt> query shape <nxt> filter <nxt> count,0.jpg
+3,How many objects of the shape as that of the blue are there?,filter blue <nxt> query shape <nxt> filter <nxt> count,0.jpg
+rectangle,What is the shape of the closest object to the yellow object?,filter yellow <nxt> relate closest <nxt> query shape,0.jpg
+circle,What is the shape of the farthest object to the blue object?,filter blue <nxt> relate farthest <nxt> query shape,0.jpg
+circle,What is the shape of the closest object to the orange object?,filter orange <nxt> relate closest <nxt> query shape,0.jpg
+circle,What is the shape of the closest object to the red object?,filter red <nxt> relate closest <nxt> query shape,0.jpg
+3,How many objects of the shape as that of the blue are there?,filter blue <nxt> query shape <nxt> filter <nxt> count,0.jpg
+rectangle,What is the shape of the closest object to the green object?,filter green <nxt> relate closest <nxt> query shape,0.jpg
+circle,What is the shape of the closest object to the red object?,filter red <nxt> relate closest <nxt> query shape,0.jpg
+no,Is there a yellow object on the top?,filter yellow <nxt> query position <nxt> isTop,0.jpg
+no,Is there a yellow object on the top?,filter yellow <nxt> query position <nxt> isTop,0.jpg
+yes,Is there a green object on the left?,filter green <nxt> query positions <nxt> isLeft,0.jpg
+no,Is there a orange object on the left?,filter orange <nxt> query positions <nxt> isLeft,0.jpg
+circle,What is the shape of the orange of the object?,filter orange <nxt> query shape,0.jpg
+no,Is there a orange object on the top?,filter orange <nxt> query position <nxt> isTop,0.jpg
+no,Is there a blue object on the top?,filter blue <nxt> query position <nxt> isTop,0.jpg
+rectangle,What is the shape of the green of the object?,filter green <nxt> query shape,0.jpg
+no,Is there a yellow object on the top?,filter yellow <nxt> query position <nxt> isTop,0.jpg
+yes,Is there a red object on the top?,filter red <nxt> query position <nxt> isTop,0.jpg
+rectangle,What is the shape of the closest object to the yellow object?,filter yellow <nxt> relate closest <nxt> query shape,1.jpg
+6,How many objects of the shape as that of the green are there?,filter green <nxt> query shape <nxt> filter <nxt> count,1.jpg
+rectangle,What is the shape of the farthest object to the blue object?,filter blue <nxt> relate farthest <nxt> query shape,1.jpg
+rectangle,What is the shape of the farthest object to the yellow object?,filter yellow <nxt> relate farthest <nxt> query shape,1.jpg
+rectangle,What is the shape of the farthest object to the red object?,filter red <nxt> relate farthest <nxt> query shape,1.jpg
+rectangle,What is the shape of the closest object to the orange object?,filter orange <nxt> relate closest <nxt> query shape,1.jpg
+rectangle,What is the shape of the farthest object to the yellow object?,filter yellow <nxt> relate farthest <nxt> query shape,1.jpg
+6,How many objects of the shape as that of the yellow are there?,filter yellow <nxt> query shape <nxt> filter <nxt> count,1.jpg
+rectangle,What is the shape of the farthest object to the green object?,filter green <nxt> relate farthest <nxt> query shape,1.jpg
+6,How many objects of the shape as that of the yellow are there?,filter yellow <nxt> query shape <nxt> filter <nxt> count,1.jpg
+yes,Is there a orange object on the left?,filter orange <nxt> query positions <nxt> isLeft,1.jpg
+rectangle,What is the shape of the yellow of the object?,filter yellow <nxt> query shape,1.jpg
+rectangle,What is the shape of the green of the object?,filter green <nxt> query shape,1.jpg
+rectangle,What is the shape of the red of the object?,filter red <nxt> query shape,1.jpg
+yes,Is there a yellow object on the left?,filter yellow <nxt> query positions <nxt> isLeft,1.jpg
+no,Is there a red object on the top?,filter red <nxt> query position <nxt> isTop,1.jpg
+no,Is there a green object on the top?,filter green <nxt> query position <nxt> isTop,1.jpg
+no,Is there a blue object on the top?,filter blue <nxt> query position <nxt> isTop,1.jpg
+rectangle,What is the shape of the blue of the object?,filter blue <nxt> query shape,1.jpg
+no,Is there a blue object on the left?,filter blue <nxt> query positions <nxt> isLeft,1.jpg
+rectangle,What is the shape of the farthest object to the orange object?,filter orange <nxt> relate farthest <nxt> query shape,2.jpg
+rectangle,What is the shape of the closest object to the red object?,filter red <nxt> relate closest <nxt> query shape,2.jpg
+rectangle,What is the shape of the closest object to the green object?,filter green <nxt> relate closest <nxt> query shape,2.jpg
+rectangle,What is the shape of the farthest object to the blue object?,filter blue <nxt> relate farthest <nxt> query shape,2.jpg
+rectangle,What is the shape of the farthest object to the gray object?,filter gray <nxt> relate farthest <nxt> query shape,2.jpg
+rectangle,What is the shape of the closest object to the blue object?,filter blue <nxt> relate closest <nxt> query shape,2.jpg
+5,How many objects of the shape as that of the orange are there?,filter orange <nxt> query shape <nxt> filter <nxt> count,2.jpg
+rectangle,What is the shape of the farthest object to the yellow object?,filter yellow <nxt> relate farthest <nxt> query shape,2.jpg
+5,How many objects of the shape as that of the green are there?,filter green <nxt> query shape <nxt> filter <nxt> count,2.jpg
+rectangle,What is the shape of the closest object to the red object?,filter red <nxt> relate closest <nxt> query shape,2.jpg
+rectangle,What is the shape of the green of the object?,filter green <nxt> query shape,2.jpg
+no,Is there a orange object on the left?,filter orange <nxt> query positions <nxt> isLeft,2.jpg
+no,Is there a orange object on the top?,filter orange <nxt> query position <nxt> isTop,2.jpg
+no,Is there a green object on the top?,filter green <nxt> query position <nxt> isTop,2.jpg
+no,Is there a green object on the top?,filter green <nxt> query position <nxt> isTop,2.jpg
+no,Is there a yellow object on the left?,filter yellow <nxt> query positions <nxt> isLeft,2.jpg
+rectangle,What is the shape of the yellow of the object?,filter yellow <nxt> query shape,2.jpg
+no,Is there a green object on the top?,filter green <nxt> query position <nxt> isTop,2.jpg
+yes,Is there a blue object on the left?,filter blue <nxt> query positions <nxt> isLeft,2.jpg
+no,Is there a blue object on the top?,filter blue <nxt> query position <nxt> isTop,2.jpg
+rectangle,What is the shape of the closest object to the yellow object?,filter yellow <nxt> relate closest <nxt> query shape,3.jpg
+rectangle,What is the shape of the closest object to the orange object?,filter orange <nxt> relate closest <nxt> query shape,3.jpg
+rectangle,What is the shape of the farthest object to the orange object?,filter orange <nxt> relate farthest <nxt> query shape,3.jpg
+circle,What is the shape of the closest object to the gray object?,filter gray <nxt> relate closest <nxt> query shape,3.jpg
+circle,What is the shape of the closest object to the red object?,filter red <nxt> relate closest <nxt> query shape,3.jpg
+circle,What is the shape of the closest object to the red object?,filter red <nxt> relate closest <nxt> query shape,3.jpg
+rectangle,What is the shape of the farthest object to the blue object?,filter blue <nxt> relate farthest <nxt> query shape,3.jpg
+rectangle,What is the shape of the farthest object to the orange object?,filter orange <nxt> relate farthest <nxt> query shape,3.jpg
+circle,What is the shape of the closest object to the red object?,filter red <nxt> relate closest <nxt> query shape,3.jpg
+3,How many objects of the shape as that of the red are there?,filter red <nxt> query shape <nxt> filter <nxt> count,3.jpg
+no,Is there a gray object on the left?,filter gray <nxt> query positions <nxt> isLeft,3.jpg
+yes,Is there a green object on the top?,filter green <nxt> query position <nxt> isTop,3.jpg
+circle,What is the shape of the gray of the object?,filter gray <nxt> query shape,3.jpg
+rectangle,What is the shape of the green of the object?,filter green <nxt> query shape,3.jpg
+no,Is there a green object on the left?,filter green <nxt> query positions <nxt> isLeft,3.jpg
+yes,Is there a red object on the left?,filter red <nxt> query positions <nxt> isLeft,3.jpg
+no,Is there a gray object on the left?,filter gray <nxt> query positions <nxt> isLeft,3.jpg
+yes,Is there a red object on the left?,filter red <nxt> query positions <nxt> isLeft,3.jpg
+circle,What is the shape of the yellow of the object?,filter yellow <nxt> query shape,3.jpg
+yes,Is there a yellow object on the top?,filter yellow <nxt> query position <nxt> isTop,3.jpg
+3,How many objects of the shape as that of the orange are there?,filter orange <nxt> query shape <nxt> filter <nxt> count,4.jpg
+circle,What is the shape of the closest object to the gray object?,filter gray <nxt> relate closest <nxt> query shape,4.jpg
+circle,What is the shape of the closest object to the orange object?,filter orange <nxt> relate closest <nxt> query shape,4.jpg
+circle,What is the shape of the closest object to the blue object?,filter blue <nxt> relate closest <nxt> query shape,4.jpg
+3,How many objects of the shape as that of the blue are there?,filter blue <nxt> query shape <nxt> filter <nxt> count,4.jpg
+rectangle,What is the shape of the closest object to the red object?,filter red <nxt> relate closest <nxt> query shape,4.jpg
+rectangle,What is the shape of the closest object to the yellow object?,filter yellow <nxt> relate closest <nxt> query shape,4.jpg
+3,How many objects of the shape as that of the gray are there?,filter gray <nxt> query shape <nxt> filter <nxt> count,4.jpg
+rectangle,What is the shape of the farthest object to the gray object?,filter gray <nxt> relate farthest <nxt> query shape,4.jpg
+rectangle,What is the shape of the closest object to the red object?,filter red <nxt> relate closest <nxt> query shape,4.jpg
+yes,Is there a gray object on the top?,filter gray <nxt> query position <nxt> isTop,4.jpg
+rectangle,What is the shape of the yellow of the object?,filter yellow <nxt> query shape,4.jpg
+rectangle,What is the shape of the blue of the object?,filter blue <nxt> query shape,4.jpg
+no,Is there a green object on the left?,filter green <nxt> query positions <nxt> isLeft,4.jpg
+circle,What is the shape of the red of the object?,filter red <nxt> query shape,4.jpg
+rectangle,What is the shape of the blue of the object?,filter blue <nxt> query shape,4.jpg
+circle,What is the shape of the green of the object?,filter green <nxt> query shape,4.jpg
+no,Is there a blue object on the top?,filter blue <nxt> query position <nxt> isTop,4.jpg
+rectangle,What is the shape of the orange of the object?,filter orange <nxt> query shape,4.jpg
+no,Is there a yellow object on the top?,filter yellow <nxt> query position <nxt> isTop,4.jpg
+rectangle,What is the shape of the farthest object to the red object?,filter red <nxt> relate farthest <nxt> query shape,5.jpg
+circle,What is the shape of the closest object to the orange object?,filter orange <nxt> relate closest <nxt> query shape,5.jpg
+4,How many objects of the shape as that of the gray are there?,filter gray <nxt> query shape <nxt> filter <nxt> count,5.jpg
+circle,What is the shape of the farthest object to the yellow object?,filter yellow <nxt> relate farthest <nxt> query shape,5.jpg
+4,How many objects of the shape as that of the blue are there?,filter blue <nxt> query shape <nxt> filter <nxt> count,5.jpg
+2,How many objects of the shape as that of the yellow are there?,filter yellow <nxt> query shape <nxt> filter <nxt> count,5.jpg
+4,How many objects of the shape as that of the gray are there?,filter gray <nxt> query shape <nxt> filter <nxt> count,5.jpg
+rectangle,What is the shape of the closest object to the yellow object?,filter yellow <nxt> relate closest <nxt> query shape,5.jpg
+rectangle,What is the shape of the closest object to the yellow object?,filter yellow <nxt> relate closest <nxt> query shape,5.jpg
+4,How many objects of the shape as that of the blue are there?,filter blue <nxt> query shape <nxt> filter <nxt> count,5.jpg
+rectangle,What is the shape of the gray of the object?,filter gray <nxt> query shape,5.jpg
+circle,What is the shape of the yellow of the object?,filter yellow <nxt> query shape,5.jpg
+no,Is there a blue object on the top?,filter blue <nxt> query position <nxt> isTop,5.jpg
+rectangle,What is the shape of the blue of the object?,filter blue <nxt> query shape,5.jpg
+rectangle,What is the shape of the orange of the object?,filter orange <nxt> query shape,5.jpg
+yes,Is there a red object on the left?,filter red <nxt> query positions <nxt> isLeft,5.jpg
+yes,Is there a red object on the left?,filter red <nxt> query positions <nxt> isLeft,5.jpg
+circle,What is the shape of the yellow of the object?,filter yellow <nxt> query shape,5.jpg
+yes,Is there a orange object on the top?,filter orange <nxt> query position <nxt> isTop,5.jpg
+yes,Is there a yellow object on the top?,filter yellow <nxt> query position <nxt> isTop,5.jpg
+rectangle,What is the shape of the closest object to the yellow object?,filter yellow <nxt> relate closest <nxt> query shape,6.jpg
+rectangle,What is the shape of the farthest object to the orange object?,filter orange <nxt> relate farthest <nxt> query shape,6.jpg
+rectangle,What is the shape of the farthest object to the gray object?,filter gray <nxt> relate farthest <nxt> query shape,6.jpg
+4,How many objects of the shape as that of the green are there?,filter green <nxt> query shape <nxt> filter <nxt> count,6.jpg
+2,How many objects of the shape as that of the orange are there?,filter orange <nxt> query shape <nxt> filter <nxt> count,6.jpg
+4,How many objects of the shape as that of the green are there?,filter green <nxt> query shape <nxt> filter <nxt> count,6.jpg
+rectangle,What is the shape of the closest object to the gray object?,filter gray <nxt> relate closest <nxt> query shape,6.jpg
+2,How many objects of the shape as that of the red are there?,filter red <nxt> query shape <nxt> filter <nxt> count,6.jpg
+rectangle,What is the shape of the farthest object to the orange object?,filter orange <nxt> relate farthest <nxt> query shape,6.jpg
+rectangle,What is the shape of the closest object to the yellow object?,filter yellow <nxt> relate closest <nxt> query shape,6.jpg
+yes,Is there a green object on the left?,filter green <nxt> query positions <nxt> isLeft,6.jpg
+no,Is there a blue object on the left?,filter blue <nxt> query positions <nxt> isLeft,6.jpg
+rectangle,What is the shape of the yellow of the object?,filter yellow <nxt> query shape,6.jpg
+yes,Is there a red object on the left?,filter red <nxt> query positions <nxt> isLeft,6.jpg
+no,Is there a red object on the top?,filter red <nxt> query position <nxt> isTop,6.jpg
+no,Is there a red object on the top?,filter red <nxt> query position <nxt> isTop,6.jpg
+yes,Is there a green object on the left?,filter green <nxt> query positions <nxt> isLeft,6.jpg
+circle,What is the shape of the red of the object?,filter red <nxt> query shape,6.jpg
+no,Is there a blue object on the left?,filter blue <nxt> query positions <nxt> isLeft,6.jpg
+no,Is there a red object on the top?,filter red <nxt> query position <nxt> isTop,6.jpg
+circle,What is the shape of the farthest object to the yellow object?,filter yellow <nxt> relate farthest <nxt> query shape,7.jpg
+rectangle,What is the shape of the farthest object to the green object?,filter green <nxt> relate farthest <nxt> query shape,7.jpg
+rectangle,What is the shape of the closest object to the gray object?,filter gray <nxt> relate closest <nxt> query shape,7.jpg
+rectangle,What is the shape of the closest object to the gray object?,filter gray <nxt> relate closest <nxt> query shape,7.jpg
+3,How many objects of the shape as that of the gray are there?,filter gray <nxt> query shape <nxt> filter <nxt> count,7.jpg
+circle,What is the shape of the farthest object to the yellow object?,filter yellow <nxt> relate farthest <nxt> query shape,7.jpg
+3,How many objects of the shape as that of the gray are there?,filter gray <nxt> query shape <nxt> filter <nxt> count,7.jpg
+circle,What is the shape of the closest object to the yellow object?,filter yellow <nxt> relate closest <nxt> query shape,7.jpg
+circle,What is the shape of the closest object to the orange object?,filter orange <nxt> relate closest <nxt> query shape,7.jpg
+rectangle,What is the shape of the closest object to the gray object?,filter gray <nxt> relate closest <nxt> query shape,7.jpg
+circle,What is the shape of the red of the object?,filter red <nxt> query shape,7.jpg
+yes,Is there a green object on the top?,filter green <nxt> query position <nxt> isTop,7.jpg
+rectangle,What is the shape of the gray of the object?,filter gray <nxt> query shape,7.jpg
+circle,What is the shape of the red of the object?,filter red <nxt> query shape,7.jpg
+circle,What is the shape of the blue of the object?,filter blue <nxt> query shape,7.jpg
+yes,Is there a gray object on the left?,filter gray <nxt> query positions <nxt> isLeft,7.jpg
+circle,What is the shape of the orange of the object?,filter orange <nxt> query shape,7.jpg
+no,Is there a orange object on the left?,filter orange <nxt> query positions <nxt> isLeft,7.jpg
+yes,Is there a orange object on the top?,filter orange <nxt> query position <nxt> isTop,7.jpg
+circle,What is the shape of the blue of the object?,filter blue <nxt> query shape,7.jpg
+rectangle,What is the shape of the closest object to the green object?,filter green <nxt> relate closest <nxt> query shape,8.jpg
+rectangle,What is the shape of the farthest object to the gray object?,filter gray <nxt> relate farthest <nxt> query shape,8.jpg
+circle,What is the shape of the farthest object to the yellow object?,filter yellow <nxt> relate farthest <nxt> query shape,8.jpg
+rectangle,What is the shape of the closest object to the orange object?,filter orange <nxt> relate closest <nxt> query shape,8.jpg
+5,How many objects of the shape as that of the red are there?,filter red <nxt> query shape <nxt> filter <nxt> count,8.jpg
+5,How many objects of the shape as that of the yellow are there?,filter yellow <nxt> query shape <nxt> filter <nxt> count,8.jpg
+rectangle,What is the shape of the closest object to the green object?,filter green <nxt> relate closest <nxt> query shape,8.jpg
+rectangle,What is the shape of the closest object to the blue object?,filter blue <nxt> relate closest <nxt> query shape,8.jpg
+rectangle,What is the shape of the closest object to the orange object?,filter orange <nxt> relate closest <nxt> query shape,8.jpg
+rectangle,What is the shape of the farthest object to the green object?,filter green <nxt> relate farthest <nxt> query shape,8.jpg
+rectangle,What is the shape of the gray of the object?,filter gray <nxt> query shape,8.jpg
+yes,Is there a red object on the left?,filter red <nxt> query positions <nxt> isLeft,8.jpg
+yes,Is there a yellow object on the left?,filter yellow <nxt> query positions <nxt> isLeft,8.jpg
+yes,Is there a gray object on the top?,filter gray <nxt> query position <nxt> isTop,8.jpg
+yes,Is there a orange object on the left?,filter orange <nxt> query positions <nxt> isLeft,8.jpg
+yes,Is there a yellow object on the left?,filter yellow <nxt> query positions <nxt> isLeft,8.jpg
+yes,Is there a yellow object on the left?,filter yellow <nxt> query positions <nxt> isLeft,8.jpg
+yes,Is there a red object on the left?,filter red <nxt> query positions <nxt> isLeft,8.jpg
+circle,What is the shape of the blue of the object?,filter blue <nxt> query shape,8.jpg
+yes,Is there a orange object on the left?,filter orange <nxt> query positions <nxt> isLeft,8.jpg
+circle,What is the shape of the farthest object to the blue object?,filter blue <nxt> relate farthest <nxt> query shape,9.jpg
+circle,What is the shape of the farthest object to the yellow object?,filter yellow <nxt> relate farthest <nxt> query shape,9.jpg
+circle,What is the shape of the farthest object to the orange object?,filter orange <nxt> relate farthest <nxt> query shape,9.jpg
+circle,What is the shape of the closest object to the gray object?,filter gray <nxt> relate closest <nxt> query shape,9.jpg
+4,How many objects of the shape as that of the blue are there?,filter blue <nxt> query shape <nxt> filter <nxt> count,9.jpg
+4,How many objects of the shape as that of the blue are there?,filter blue <nxt> query shape <nxt> filter <nxt> count,9.jpg
+circle,What is the shape of the closest object to the yellow object?,filter yellow <nxt> relate closest <nxt> query shape,9.jpg
+2,How many objects of the shape as that of the green are there?,filter green <nxt> query shape <nxt> filter <nxt> count,9.jpg
+circle,What is the shape of the farthest object to the green object?,filter green <nxt> relate farthest <nxt> query shape,9.jpg
+4,How many objects of the shape as that of the gray are there?,filter gray <nxt> query shape <nxt> filter <nxt> count,9.jpg
+rectangle,What is the shape of the yellow of the object?,filter yellow <nxt> query shape,9.jpg
+yes,Is there a gray object on the top?,filter gray <nxt> query position <nxt> isTop,9.jpg
+yes,Is there a orange object on the left?,filter orange <nxt> query positions <nxt> isLeft,9.jpg
+circle,What is the shape of the orange of the object?,filter orange <nxt> query shape,9.jpg
+yes,Is there a yellow object on the left?,filter yellow <nxt> query positions <nxt> isLeft,9.jpg
+yes,Is there a blue object on the top?,filter blue <nxt> query position <nxt> isTop,9.jpg
+yes,Is there a gray object on the top?,filter gray <nxt> query position <nxt> isTop,9.jpg
+circle,What is the shape of the blue of the object?,filter blue <nxt> query shape,9.jpg
+yes,Is there a orange object on the left?,filter orange <nxt> query positions <nxt> isLeft,9.jpg
+yes,Is there a orange object on the left?,filter orange <nxt> query positions <nxt> isLeft,9.jpg

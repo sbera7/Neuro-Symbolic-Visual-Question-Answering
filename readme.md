@@ -16,11 +16,9 @@ The basic idea behind using NSAI for VQA is parsing the visual scene into a symb
 - Numpy
 
 ## Usage
-### Generate the dataset
-```bash
-# Generating 50 images for training and 100 images for testing
-python data_generator.py --n_train 50 --n_test 100
-```
+- The Step-by-Step usage is in the [NSAI on Sort-of-CLEVR.ipynb](https://github.com/nerdimite/neuro-symbolic-ai-soc/blob/master/NSAI%20on%20Sort-of-CLEVR.ipynb) notebook from training the individual modules to plugging everything together to test it.
+- You can easily run this repository using Colab <a href="https://colab.research.google.com/github/nerdimite/neuro-symbolic-ai-soc/blob/master/NSAI%20on%20Sort-of-CLEVR.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"/></a>
+- To understand more about the design and workflow, check out [NSAI Flow Diagram.pdf](https://github.com/nerdimite/neuro-symbolic-ai-soc/blob/master/NSAI%20Flow%20Diagram.pdf) which contains the workflows of every component i.e. Perception Module, Semantic Parser and Program Executor.
 
 ## References
 - [Neural-Symbolic VQA: Disentangling Reasoning from Vision and Language Understanding](https://arxiv.org/abs/1810.02338)

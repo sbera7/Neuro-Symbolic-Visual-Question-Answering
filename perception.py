@@ -10,10 +10,10 @@ from torchvision.datasets import ImageFolder
 from torch.utils.data import DataLoader
 from torchvision import transforms as tfms
 from PIL import Image
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 
 
-def train_detector(train_data, filename='detector.svm'):
+def train_detector(train_data, filename='models/detector.svm'):
     '''Trains an object detector (HOG + SVM) and saves the model'''
     
     # Seperate the images and bounding boxes in different lists.
@@ -60,7 +60,7 @@ class ShapeClassifier(nn.Module):
         
         return x
     
-    def train_classifier(self, train_loader, lr=0.0001, epochs=10, filename='classifier.pth', device=None):
+    def train_classifier(self, train_loader, lr=0.0001, epochs=10, filename='models/classifier.pth', device=None):
         '''Train the shape classifier'''
         # Automatically set device if not provided
         if device is None:
@@ -205,8 +205,8 @@ class PerceptionPipe():
         
         for obj, center in objects:
             shape, color = self.extract_attributes(obj, prob, debug)
-            scene_df = scene_df.append({'shape': shape, 
+            scene_df = pd.concat([scene_df, pd.DataFrame([{'shape': shape, 
                                         'color': color, 
-                                        'position': center}, ignore_index=True)
+                                        'position': center}])])
         
         return scene_df

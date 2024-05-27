@@ -6,7 +6,7 @@ import torch
 from torch import nn
 from torchtext.data import Field, TabularDataset, BucketIterator
 import spacy
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 
 class Preprocessor():
     '''Preprocessor for preparing Queries and Programs for Seq2Seq'''
@@ -133,7 +133,7 @@ class Seq2Seq(nn.Module):
                     num_epochs,
                     num_steps,
                     lr=3e-4,
-                    filename='semantic_parser.pth'):
+                    filename='models/semantic_parser.pth'):
         
         # Create optimizer and loss function
         optimizer = torch.optim.Adam(self.parameters(), lr=lr)

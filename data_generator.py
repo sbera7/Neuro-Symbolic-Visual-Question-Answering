@@ -199,7 +199,7 @@ def convert_sample(sample):
         ans = answer_sheet[answer]
         text_answers.append(ans)
 
-    return img, objects, queries, text_answers, programs
+    return img, objects, queries, programs, text_answers
 
 
 def build_dataset(num_samples, data_dir, prefix):
